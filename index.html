@@ -1,12 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/main.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/output.css" />
+  <title>Portafolio Elder Cuases</title>
 </head>
-<body>
-    
+
+<body class="bg-[var(--color-dark)] text-[var(--color-light)]">
+  <header>
+    <div id="navegador" class="bg-[var(--color-dark)] flex justify-between items-center p-6">
+      <span><img src="./src/images/logo.png" alt="elder logo" class="h-10"></span>
+      <nav>
+        <ul class="flex space-x-6 text-[var(--color-light)]">
+          <li><a href="#about_me" class="hover:text-[var(--color-highlight)]">ABOUT ME</a></li>
+          <li><a href="#skills" class="hover:text-[var(--color-highlight)]">SKILLS</a></li>
+          <li><a href="#projects" class="hover:text-[var(--color-highlight)]">PROJECTS</a></li>
+        </ul>
+      </nav>
+      <span><a href="#contact" class="text-[var(--color-light)] hover:text-[var(--color-highlight)]">CONTACT</a></span>
+    </div>
+  </header>
+  <main class="my-10">
+    <section id="hero"
+      class="relative bg-[var(--color-deepBlue)] h-screen flex flex-col justify-center items-center text-center text-[var(--color-light)] px-6">
+      <div id="gradient"
+        class="absolute inset-0 bg-gradient-to-b from-[var(--color-dark)] to-[var(--color-deepBlue)] flex flex-col justify-center items-center">
+        <h1 class="text-5xl md:text-6xl font-bold">I'm <span class="text-[var(--color-highlight)]">Elder Cuases</span>
+        </h1>
+        <h2 class="text-xl md:text-2xl font-medium mt-4">Full Stack Developer</h2>
+        <div class="mt-6">
+          <img src="./src/images/WhatsApp_Image_2025-02-25_at_4.03.49_PM-removebg-preview.png" alt="Elder Foto"
+            class=" shadow-2xl mx-auto">
+        </div>
+        <div class="flex justify-between w-full max-w-4xl mt-8 px-6 sm:px-10">
+          <div id="card_left"
+            class="w-full sm:w-1/2 bg-[var(--color-light)] p-6 rounded-lg shadow-lg text-center mb-6 sm:mb-0">
+            <p>Card left</p>
+          </div>
+          <div id="card_right" class="w-full sm:w-1/2 bg-[var(--color-light)] p-6 rounded-lg shadow-lg text-center">
+            <p>Card right</p>
+          </div>
+        </div>
+        <div class="mt-8">
+          <button
+            class="bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-lg hover:bg-[var(--color-neonGreen)] transition-all">
+            <a href="#projects">MY PROJECTS</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="about_me" class="py-20 px-6 bg-[var(--color-light)] text-[var(--color-dark)]">
+      <article class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold">WHO AM I</h2>
+        <p class="mt-6 text-lg text-[var(--color-softGray)]">Soy un desarrollador web apasionado que comenzó su
+          trayectoria en 2021. Desde siempre me ha gustado la
+          tecnología y la programación, lo que me llevó a estudiar y dominar HTML, CSS, JavaScript, Python y C#. Además,
+          tengo conocimientos en cloud computing con AWS, lo que me permite desarrollar y desplegar aplicaciones en la
+          nube de manera eficiente. Me encanta seguir aprendiendo y enfrentar nuevos retos en el mundo del desarrollo
+          web y la tecnología.</p>
+        <div class="mt-6">
+          <button
+            class="bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-lg hover:bg-[var(--color-neonGreen)]">
+            <a href="#projects">SHOW MY PROJECTS</a>
+          </button>
+        </div>
+      </article>
+      <div class="mt-12">
+        <img src="./src/images/Image3.jpeg" alt="foto fondo" class="w-full h-96 object-cover rounded-lg shadow-lg">
+      </div>
+
+    </section>
+    <section id="skills" class="w-full bg-slate-300 py-8 h-screen">
+      <h2 class="text-center text-2xl font-bold">MY SKILLS</h2>
+      <div class="flex flex-wrap justify-center lg:flex-nowrap">
+
+        <div class="min-h-80 w-full lg:w-8/12 bg-black flex flex-wrap p-4 justify-around lg:justify-start">
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/html.png" alt="html logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/css.png" alt="css logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/js.png" alt="js logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/pyton.png" alt="pyton logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/Csharp_Logo.png" alt="c sharp logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/Sass_Logo.png" alt="sass logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/Bootstrap_logo.png" alt="bootstrap logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/Tailwind_CSS_Logo.png" alt="tailwind logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/node.png" alt="node logo"></div>
+          <div class="w-24 h-30 mb-4 lg:mb-0"><img src="./src/icons/React.svg.png" alt="react logo"></div>
+        </div>
+
+        <div class="w-full lg:w-4/12 mt-8 lg:mt-0 text-center lg:text-left">
+          <h3 class="text-xl font-semibold">4</h3>
+          <p>Years Experience Working</p>
+          <button
+            class="mt-4 bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-lg hover:bg-[var(--color-neonGreen)] transition-all">
+            <a href="./src/images/resume-ec.png" download="Mi_Hoja_de_Vida.png">DOWNLOAD MY CV</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="aditional_skills" class="py-16 bg-[var(--color-light)] text-center">
+      <h2 class="text-3xl font-bold text-[var(--color-dark)]">ADDITIONAL SKILLS</h2>
+
+      <ul class="flex justify-center space-x-8 mt-6 flex-wrap">
+        <li><img src="./src/icons/google.png" alt="google logo" class="w-12 h-12"></li>
+        <li><img src="./src/icons/aws.png" alt="aws logo" class="w-12 h-12"></li>
+        <li><img src="./src/icons/Illustrator-Logo.png" alt="ilustrador logo" class="w-12 h-12"></li>
+        <li><img src="./src/icons/ps.png" alt="ps logo" class="w-12 h-12"></li>
+      </ul>
+
+    </section>
+    <section id="projects" class="py-20 bg-[var(--color-deepBlue)] text-center">
+      <h2 class="text-[var(--color-light)] text-3xl font-bold">THE WORKS CLOSEST TO MY HEART</h2>
+      <button
+        class="bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-lg hover:bg-[var(--color-neonGreen)] mt-6">
+        <a href="https://github.com/ElderSound">SHOW MY PROJECTS</a>
+      </button>
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div>
+          <img src="./src/images/image1.jpeg" alt="image 1" class="w-full h-60 object-cover rounded-lg shadow-lg">
+        </div>
+        <div>
+          <img src="./src/images/image2.jpg" alt="image 2" class="w-full h-60 object-cover rounded-lg shadow-lg">
+        </div>
+        <div>
+          <img src="./src/images/Image3.jpeg" alt="image 3" class="w-full h-60 object-cover rounded-lg shadow-lg">
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="bg-[var(--color-dark)] py-12 text-center text-[var(--color-light)]">
+      <h2 class="text-3xl font-bold mb-6">LET'S HAVE A CHAT</h2>
+      <form class="max-w-lg mx-auto bg-[var(--color-softGray)] p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <input type="text" name="name" id="name" placeholder="YOUR NAME"
+            class="w-full p-3 text-[var(--color-dark)] bg-white rounded-lg border border-[var(--color-softGray)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]" />
+        </div>
+
+        <div class="mb-4">
+          <input type="email" name="mail" id="mail" placeholder="EMAIL ADDRESS"
+            class="w-full p-3 text-[var(--color-dark)] bg-white rounded-lg border border-[var(--color-softGray)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]" />
+        </div>
+
+        <div class="mb-6">
+          <textarea name="description" id="description" placeholder="CHAT HERE" rows="4"
+            class="w-full p-3 text-[var(--color-dark)] bg-white rounded-lg border border-[var(--color-softGray)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full py-3 bg-[var(--color-highlight)] text-[var(--color-dark)] font-semibold rounded-lg hover:bg-[var(--color-neonGreen)] transition-colors">
+          SUBMIT HERE
+        </button>
+      </form>
+    </section>
+  </main>
+  <footer class="bg-[var(--color-dark)] text-[var(--color-light)] py-6">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <span><img src="./src/images/logo.png" alt="elder logo" class="w-16 h-auto"></span>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#about_me" class="hover:text-[var(--color-highlight)]">ABOUT ME</a></li>
+          <li><a href="#skills" class="hover:text-[var(--color-highlight)]">SKILLS</a></li>
+          <li><a href="#projects" class="hover:text-[var(--color-highlight)]">PROJECTS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
 </body>
+
 </html>

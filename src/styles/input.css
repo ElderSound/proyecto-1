@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/*@theme{
+       --color-dark: "#0D1117";
+       --color-light: "#FFFFFF";
+       --color-highlight: "#E3FF6A";
+       --color-neonGreen: "#A4FF7A";
+       --color-deepBlue: "#1E293B";
+       --color-softGray: "#8892B0";
+}*/
+
+:root {
+       --color-dark: #0D1117;
+       --color-light: #FFFFFF;
+       --color-highlight: #E3FF6A;
+       --color-neonGreen: #A4FF7A;
+       --color-deepBlue: #1E293B;
+       --color-softGray: #8892B0;
+}
+
+/*#gradient{
+       width: 100%;
+       aspect-ratio: 16/9;
+       background-image: linear-gradient(180deg, rgb(0, 4, 20)0%, rgb(42,66,114)90%);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       overflow: hidden;
+}
+img{
+       position: absolute;
+       bottom: 0;
+       filter: drop-shadow(-4px -4px 120px rgb(194,194, 41));
+}*/
