@@ -14,8 +14,10 @@
        --color-light: #FFFFFF;
        --color-highlight: #E3FF6A;
        --color-neonGreen: #A4FF7A;
-       --color-deepBlue: #1E293B;
+       --color-deepBlue: #283751;
+       --color-gradBlue: #2b4779;
        --color-softGray: #8892B0;
+      
 }
 
 /*#gradient{
