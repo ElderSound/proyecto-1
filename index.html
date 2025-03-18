@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/styles/output.css" />
+  <script src="./src/scrypts/habilidades.js" defer></script>
   <title>Portafolio Elder Cuases</title>
 </head>
 
@@ -12,222 +13,246 @@
   <!-- HEADER -->
 
   <header>
-    <div id="navegador" class="bg-[var(--color-dark)] flex justify-between items-center p-6">
+    <div id="navegador" class="relative bg-[var(--color-dark)] flex justify-between items-center p-3">
       <span><img src="./src/icons/decepticon.png" alt="elder logo" class="h-10"></span>
-      <nav class="text-xs md:text-base">
+
+      <!-- NAV -->
+      <nav class="text-xs md:text-base hidden md:block">
         <ul class="flex space-around text-[var(--color-light)]">
           <li><a href="#about_me" class="hover:text-[var(--color-highlight)]">ABOUT ME</a></li>
           <li class="px-1 md:px-10"><a href="#skills" class="hover:text-[var(--color-highlight)]">SKILLS</a></li>
-          <li><a href="#projects" class="hover:text-[var(--color-highlight)]">PROJECTS</a></li>
+          <li><a href="./src/html/proyectos.html" class="hover:text-[var(--color-highlight)]">PROJECTS</a></li>
         </ul>
       </nav>
-      <span class="text-[var(--color-light)] hover:text-[var(--color-highlight)] 
-              flex items-center space-x-2 border border-white px-1 py-1 rounded-full 
-              transition-all dursation-300 text-xs md:text-base ">
-        <a href="#contact">CONTACT</a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="text-[var(--color-dark)] bg-[var(--color-highlight)] rounded-full  ">
-          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-          <path d="M15 9l-6 6" />
-          <path d="M15 15v-6h-6" />
-        </svg>
-      </span>
 
+      <!-- CONTACTO -->
+      <a href="#contact" class="hidden md:block">
+        <span class="text-[var(--color-light)] hover:text-[var(--color-highlight)] 
+              flex items-center space-x-2 border border-white px-1 py-1 rounded-full 
+              transition-all duration-300 text-xs md:text-base ">
+          CONTACT
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="text-[var(--color-dark)] bg-[var(--color-highlight)] rounded-full  ">
+            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+            <path d="M15 9l-6 6" />
+            <path d="M15 15v-6h-6" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- BOTON TOGGLE -->
+      <button id="menu-toggle" class="md:hidden text-[var(--color-light)]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="text-[var(--color-dark)] bg-[var(--color-highlight)] rounded-full p-1">
+          <path d="M3 12h18"></path>
+          <path d="M3 6h18"></path>
+          <path d="M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- MENU DESPLEGABLE -->
+    <div id="menu-mobile"
+      class="absolute bg-[var(--color-dark)] hidden right-0 z-20 top-10 mt-2 p-4 rounded-lg shadow-lg w-48 ">
+      <ul class="text-[var(--color-light)] space-y-4">
+        <li><a href="#about_me" class="hover:text-[var(--color-highlight)] pl-2">ABOUT ME</a></li>
+        <li><a href="#skills" class="hover:text-[var(--color-highlight)] pl-2 ">SKILLS</a></li>
+        <li><a href="./src/html/proyectos.html" class="hover:text-[var(--color-highlight)] pl-2">PROJECTS</a></li>
+        <li><a href="#contact">
+            <span class="text-[var(--color-light)] hover:text-[var(--color-highlight)] 
+                flex items-center space-x-2 border border-white px-1 py-1 rounded-full 
+                transition-all duration-300 text-base mr-13">
+              CONTACT
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-[var(--color-dark)] bg-[var(--color-highlight)] rounded-full  ">
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                <path d="M15 9l-6 6" />
+                <path d="M15 15v-6h-6" />
+              </svg>
+            </span>
+          </a></li>
+      </ul>
     </div>
   </header>
-  <main class="my-10">
+  <main>
     <!-- HERO -->
     <section id="hero"
-      class="relative bg-[var(--color-deepBlue)] h-screen flex flex-col justify-center items-center text-center text-[var(--color-light)] px-6">
+      class="relative z-10 bg-[var(--color-deepBlue)] h-[60vh] md:h-[90vh] flex flex-col justify-center items-center text-center text-[var(--color-light)] px-6">
       <div id="gradient"
         class="absolute inset-0 bg-gradient-to-b from-[var(--color-dark)] to-[var(--color-gradBlue)] flex flex-col justify-center items-center">
-        <h1 class="text-5xl md:text-6xl ">I'm <span class="text-[var(--color-highlight)] italic">Elder
+        <h1 class="text-5xl md:text-6xl absolute top-3 md:top-2">I'm <span
+            class="text-[var(--color-highlight)] italic">Elder
             Cuases</span>
         </h1>
-        <h2 class="text-xl md:text-6xl font-medium mt-4"><span class="border border-white  px-1 py-1 rounded-md">Full
+        <h2 class="text-xl md:text-6xl font-medium mt-4 absolute top-15"><span
+            class="border border-white  px-1 py-1 rounded-md">Full
             Stack</span> Developer</h2>
         <!-- HERO IMG -->
-        <div class=" filter drop-shadow-[0_20px_150px_rgba(227,255,106,0.7)]">
+        <div
+          class="m-auto h-auto absolute bottom-0 z-10 overflow-hidden w-full md:h-full flex justify-center items-end">
           <img src="./src/images/WhatsApp_Image_2025-02-25_at_4.03.49_PM-removebg-preview.png" alt="Elder Foto"
-            class=" h-100 overflow-hidden md:w-full">
+            class=" overflow-hidden md:w-auto h-100 md:h-auto  md:max-w-[500px] object-cover drop-shadow-[0_20px_50px_rgba(227,255,106,0.7)]  md:drop-shadow-[0_20px_120px_rgba(227,255,106,0.7)] ">
         </div>
         <!-- CARD container -->
-        <div class="flex flex-wrap justify-between w-full max-w-4xl mt-8 px-6  sm:px-10">
+        <div class="hidden md:flex flex-wrap justify-between w-full max-w-4xl mt-8 px-6  sm:px-10 absolute  ">
           <!-- CARD LEFT -->
           <div id="card_left"
-            class=" w-full  md:w-1/2 bg-[var(--color-deepBlue)] py-6 rounded-lg shadow-lg text-center">
+            class=" w-full md:w-1/4 bg-[var(--color-deepBlue)] p-6 rounded-lg shadow-lg  md:text-left text-center md:absolute md:left-5 md:z-20 md:-rotate-6">
             <p class=" text-white">Client Review from <br>Ecuador </p>
+            <p class="text-[var(--color-softGray)] text-sm">Open to remote & home office contract</p>
           </div>
           <!-- CARD RIGHT -->
           <div id="card_right"
-            class=" w-full  md:w-1/2 bg-[var(--color-deepBlue)] p-6 rounded-lg shadow-lg text-center">
+            class=" w-full  md:w-1/4 bg-[var(--color-deepBlue)] p-6 rounded-lg shadow-lg text-center md:absolute md:right-5 md:z-20 md:rotate-6">
             <p class=" text-White">MY EXPERTISE <br> BackEnd-----80% <br>CMS--------10% <br>FrontEnd-----90%</p>
           </div>
         </div>
-        <div class="mt-8">
+        <div class="mt-8 absolute bottom-5 z-20">
           <button
-            class="bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-lg hover:bg-[var(--color-neonGreen)] transition-all">
-            <a href="#projects">MY PROJECTS</a>
+            class="bg-[var(--color-highlight)] text-[var(--color-dark)] py-1 px-3 lg:py-2 lg:px-6 rounded-full  hover:bg-[var(--color-neonGreen)] transition-all">
+            <a href="#projects" class="txt-sm  ">MY PROJECTS</a>
           </button>
         </div>
       </div>
-      <!-- WHO AM I -->
     </section>
+    <!-- WHO AM I -->
     <section id="about_me" class="py-20 px-6 ">
-      <article class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold">WHO AM I</h2>
-        <p class="mt-6 text-lg text-[var(--color-softGray)]">Soy un desarrollador web apasionado que comenzó su
+      <article class="max-w-4xl mx-auto text-center pt-20 relative">
+        <h2 class=" text-3xl lg:text-5xl md:text-[var(--color-highlight)]">WHO AM I?</h2>
+        <p class="mt-6 text-lg text-[var(--color-softGray)] md:max-w-[500px] m-auto px-4">Soy un desarrollador web
+          apasionado
+          que
+          comenzó su
           trayectoria en 2021. Desde siempre me ha gustado la
-          tecnología y la programación, lo que me llevó a estudiar y dominar HTML, CSS, JavaScript, Python y C#. Además,
+          tecnología y la programación, lo que me llevó a estudiar y dominar HTML, CSS, JavaScript, Python y C#.
+          <br><br>
+          Además,
           tengo conocimientos en cloud computing con AWS, lo que me permite desarrollar y desplegar aplicaciones en la
-          nube de manera eficiente. Me encanta seguir aprendiendo y enfrentar nuevos retos en el mundo del desarrollo
-          web y la tecnología.</p>
-        <div class="mt-6">
+          nube de manera eficiente. <br> <br>Me encanta seguir aprendiendo y enfrentar nuevos retos en el mundo del
+          desarrollo
+          web y la tecnología.
+        </p>
+        <div class="mt-20">
           <button
-            class="bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-lg hover:bg-[var(--color-neonGreen)]">
+            class="bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-full  hover:bg-[var(--color-neonGreen)]">
             <a href="#projects">SHOW MY PROJECTS</a>
           </button>
+          <!-- WHO AM I IMAGEN large -->
+          <div class="hidden md:flex">
+            <div
+              class=" md:absolute  md:bottom-50 md:left-10 w-auto  overflow-hidden rounded-lg shadow-lg md:rotate-15 drop-shadow-[0_15px_20px_rgba(227,255,106,0.2)]">
+              <img src="./src/images/elder1.jpeg" alt="image 1" class="w-20 object-cover rounded-lg shadow-lg ">
+            </div>
+            <div
+              class=" md:absolute md:top-20 md:right-20 w-auto overflow-hidden rounded-lg shadow-lg md:-rotate-15 drop-shadow-[0_15px_20px_rgba(227,255,106,0.2)]">
+              <img src="./src/images/elder2.jpeg" alt="image 2" class="w-15  object-cover rounded-lg shadow-lg">
+            </div>
+            <div
+              class=" md:absolute md:top-3 md:left-40 w-auto overflow-hidden rounded-lg shadow-lg md:-rotate-15 drop-shadow-[0_15px_20px_rgba(227,255,106,0.2)]">
+              <img src="./src/images/elder3.jpeg" alt="image 3" class="w-15  object-cover rounded-lg shadow-lg">
+            </div>
+          </div>
         </div>
       </article>
-      <!-- WHO AM I IMAGEN -->
-      <div class="mt-12">
-        <img src="./src/images/Image3.jpeg" alt="foto fondo" class="w-full h-96 object-cover rounded-lg shadow-lg">
+      <!-- WHO AM I IMAGEN small-->
+      <div class="mt-12 md:hidden">
+        <img src="./src/images/Image3.jpeg" alt="foto fondo" class="w-full h-50 object-cover rounded-lg shadow-lg">
       </div>
-
     </section>
     <!-- MY SKILLS -->
-    <section id="skills" class="w-full bg-[var(--color-dark)] py-4 px-8 h-screen">
-      <h2 class="text-center text-2xl font-bold">MY SKILLS</h2>
-      <div class="flex flex-wrap justify-center lg:flex-nowrap">
-
-        <div
-          class="min-h-80 items-center w-full lg:w-8/12 bg-[var(--color-dark)] flex flex-wrap p-4 justify-around lg:justify-start ">
+    <section id="skills" class="w-full bg-[var(--color-dark)] py-4 px-8 ">
+      <h2 class="text-center text-3xl lg:text-5xl md:text-[var(--color-highlight)]">MY SKILLS</h2>
+      <!-- CONTENEDOR CARDS -->
+      <div
+        class="flex flex-wrap justify-center items-center max-w-[850px] gap-3 mx-auto lg:flex-row lg:flex lg:justify-center">
+        <div class="min-h-80 items-center w-full lg:w-8/12 bg-[var(--color-dark)] flex flex-wrap p-4 justify-around "
+          id="skills_container">
           <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
           shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
           ring-1 ring-gray-500 rounded-md flex items-center justify-center 
           transition-all duration-300 lg:hover:translate-y-1 lg:hover:shadow-md 
           active:translate-y-1 active:shadow-md px-5"><img src="./src/icons/html.png" alt="html logo"></div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center 
-          transition-all duration-300 lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md px-5"><img src="./src/icons/css.png" alt="css logo"></div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center 
-          transition-all duration-300 lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md px-5"><img src="./src/icons/js.png" alt="js logo"></div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center transition-all duration-300 
-          lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md px-5"><img src="./src/icons/python.png" alt="pyton logo"></div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center transition-all duration-300 
-          lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md"><img src="./src/icons/Csharp_Logo.png" alt="c sharp logo">
-          </div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center transition-all duration-300 
-          lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md px-5"><img src="./src/icons/Sass_Logo.png" alt="sass logo"></div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center 
-          transition-all duration-300 
-          lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md px-5"><img src="./src/icons/Bootstrap_logo.png" alt="bootstrap logo">
-          </div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center 
-          transition-all duration-300 
-          lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md px-5"><img src="./src/icons/Tailwind_CSS_Logo.png" alt="tailwind logo">
-          </div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center 
-          transition-all duration-300 
-          lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md px-5" px-5><img src="./src/icons/node.png" alt="node logo"></div>
-          <div class="w-24 h-30 mb-4 lg:mb-0 bg-[var(--color-deepBlue)] 
-          shadow-[6px_6px_10px_rgba(180,180,180,0.1)] border border-gray-800 
-          ring-1 ring-gray-500 rounded-md flex items-center justify-center 
-          transition-all duration-300 
-          lg:hover:translate-y-1 lg:hover:shadow-md 
-          active:translate-y-1 active:shadow-md px-5"><img src="./src/icons/React.svg.png" alt="react logo"></div>
+
         </div>
         <!-- ASIDE CARD MY SKILLS -->
-        <div class="w-full md:py-8 lg:w-4/12 mt-8 lg:mt-0 text-center lg:bg-[var(--color-deepBlue)] lg:text-center">
-          <h3 class="text-9xl font-semibold ">4</h3>
-          <p>Years Experience Working</p>
+        <div
+          class="w-full lg:max-w-[230px] lg:px-1 lg:py-4 lg:max-h-[300px] md:py-8 rounded-md text-center lg:bg-[var(--color-deepBlue)] lg:text-center">
+          <h3 class="text-9xl lg:text-5xl font-semibold lg:my-4">4</h3>
+          <p class=" lg:font-bold lg:px-18 lg:my-4">Years Experience Working</p>
           <button
-            class="mt-4 bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-lg hover:bg-[var(--color-neonGreen)] transition-all">
+            class="mt-4 bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-full  hover:bg-[var(--color-neonGreen)] transition-all lg:my-4">
             <a href="./src/images/resume-ec.png" download="Mi_Hoja_de_Vida.png">DOWNLOAD MY CV</a>
           </button>
         </div>
       </div>
     </section>
     <!-- ADITIONAL SKILLS-->
-    <section id="aditional_skills" class="py-16 text-center bg-[var(--color-deepBlue)]">
-      <h2 class="text-3xl font-bold ">ADDITIONAL SKILLS</h2>
+    <section id="aditional_skills" class="py-16 text-center bg-[var(--color-deepBlue)] md:max-w-[900px] lg:max-w-[1000px] m-auto
+      lg:w-5xl lg:mx-auto lg:py-16 lg:bg-[var(--color-deepBlue)] md:border md:border-gray-800 
+      md:ring-1 md:ring-gray-500 md:rounded-md ">
 
-      <ul class="flex justify-center space-x-8 mt-6 flex-wrap">
+      <h2 class="text-3xl lg:text-[var(--color-highlight)] ">ADDITIONAL SKILLS</h2>
+
+      <ul class="flex justify-center space-x-8 mt-6 flex-wrap" id="add_skills">
         <li><img src="./src/icons/google.png" alt="google logo"
-            class=" w-12 h-12 transition-transform duration-300 ease-out lg:hover:scale-120 active:scale-115"></li>
-        <li><img src="./src/icons/aws-w.png" alt="aws logo"
-            class="w-16 h-12 transition-transform duration-300 ease-out lg:hover:scale-120 active:scale-115"></li>
-        <li><img src="./src/icons/Illustrator-Logo.png" alt="ilustrador logo"
-            class="w-12 h-12 transition-transform duration-300 ease-out lg:hover:scale-120 active:scale-115"></li>
-        <li><img src="./src/icons/ps.png" alt="ps logo"
-            class="w-12 h-12 transition-transform duration-300 ease-out lg:hover:scale-120 active:scale-115"></li>
+            class=" w-12 h-12 transition-transform duration-300 ease-out md:hover:scale-120 active:scale-115"></li>
       </ul>
     </section>
     <!-- PROJECTS -->
-    <section id="projects" class="py-20  text-center">
-      <h2 class="text-[var(--color-light)] text-3xl font-bold">THE WORKS CLOSEST TO MY HEART</h2>
-      <button
-        class="bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-lg hover:bg-[var(--color-neonGreen)] mt-6">
-        <a href="https://github.com/ElderSound">SHOW MY PROJECTS</a>
-      </button>
-      <!-- PROJECTS IMAGES -->
-      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div>
-          <img src="./src/images/image1.jpeg" alt="image 1" class="w-full h-60 object-cover rounded-lg shadow-lg">
+    <section id="projects"
+      class="py-20 text-center md:m-auto md:flex md:items-center lg:px-10 md:max-w-[900px] lg:max-w-[1000px]">
+      <!-- PROJECT TEXT - BUTTON -->
+      <div class="relative w-auto md:w-1/2 text-center md:text-left md:pl-12">
+        <h2 class="text-[var(--color-light)] text-3xl font-bold md:max-w-[350px] md:text-5xl md:text-center shrink-0">
+          THE WORKS CLOSEST TO MY HEART
+        </h2>
+        <button
+          class="md:absolute md:z-20 md:left-50 bg-[var(--color-highlight)] text-[var(--color-dark)] py-2 px-6 rounded-full hover:bg-[var(--color-neonGreen)] mt-6 w-auto md:w-80">
+          <a href="./src/html/proyectos.html">SHOW MY PROJECTS</a>
+        </button>
+      </div>
+
+      <!-- PROJECT IMAGENES-->
+      <div class=" mt-12 md:mt-0 px-5 grid grid-cols-1 gap-6 md:m-auto md:px-10 md:w-1/2 md:flex overflow-hidden ">
+        <div class="w-full m-auto overflow-hidden transition-all duration-300 md:hover:w-[170%] rounded-lg shadow-lg ">
+          <img src="./src/images/image1.jpeg" alt="image 1"
+            class="h-50 md:h-100 w-full object-cover transition-transform duration-300 md:hover:scale-120">
         </div>
-        <div>
-          <img src="./src/images/image2.jpg" alt="image 2" class="w-full h-60 object-cover rounded-lg shadow-lg">
+        <div class="w-full overflow-hidden transition-all duration-300 md:hover:w-[170%] rounded-lg shadow-lg">
+          <img src="./src/images/image2.jpg" alt="image 2"
+            class="h-50 md:h-100  w-full object-cover  transition-transform duration-300 md:hover:scale-120">
         </div>
-        <div>
-          <img src="./src/images/Image3.jpeg" alt="image 3" class="w-full h-60 object-cover rounded-lg shadow-lg">
+        <div class="w-full overflow-hidden transition-all duration-300 md:hover:w-[170%] rounded-lg shadow-lg">
+          <img src="./src/images/image4.jpg" alt="image 3"
+            class="h-50 md:h-100  w-full object-cover transition-transform duration-300 md:hover:scale-120">
         </div>
       </div>
     </section>
+
     <!-- FORM-->
     <section id="contact" class="bg-[var(--color-dark)] py-12 text-center text-[var(--color-light)]">
       <h2 class="text-3xl font-bold mb-6">LET'S HAVE A CHAT</h2>
       <form class="max-w-lg mx-auto bg-[var(--color-softGray)] p-6 rounded-lg shadow-lg">
         <div class="mb-4">
-          <input type="text" name="name" id="name" placeholder="YOUR NAME"
+          <input required type="text" name="name" id="name" placeholder="YOUR NAME"
             class="w-full p-3 text-[var(--color-dark)] bg-white rounded-lg border border-[var(--color-softGray)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]" />
         </div>
 
         <div class="mb-4">
-          <input type="email" name="mail" id="mail" placeholder="EMAIL ADDRESS"
+          <input required type="email" name="mail" id="mail" placeholder="EMAIL ADDRESS"
             class="w-full p-3 text-[var(--color-dark)] bg-white rounded-lg border border-[var(--color-softGray)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]" />
         </div>
 
         <div class="mb-6">
-          <textarea name="description" id="description" placeholder="CHAT HERE" rows="4"
+          <textarea required name="description" id="description" placeholder="CHAT HERE" rows="4"
             class="w-full p-3 text-[var(--color-dark)] bg-white rounded-lg border border-[var(--color-softGray)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"></textarea>
         </div>
 
         <button type="submit"
-          class="w-full py-3 bg-[var(--color-highlight)] text-[var(--color-dark)] font-semibold rounded-lg hover:bg-[var(--color-neonGreen)] transition-colors">
+          class="w-full py-3 bg-[var(--color-highlight)] text-[var(--color-dark)] font-semibold rounded-full hover:bg-[var(--color-neonGreen)] transition-colors">
           SUBMIT HERE
         </button>
       </form>
@@ -241,7 +266,7 @@
         <ul class="flex space-x-6">
           <li><a href="#about_me" class="hover:text-[var(--color-highlight)]">ABOUT ME</a></li>
           <li><a href="#skills" class="hover:text-[var(--color-highlight)]">SKILLS</a></li>
-          <li><a href="#projects" class="hover:text-[var(--color-highlight)]">PROJECTS</a></li>
+          <li><a href="./src/html/proyectos.html" class="hover:text-[var(--color-highlight)]">PROJECTS</a></li>
         </ul>
       </nav>
     </div>
