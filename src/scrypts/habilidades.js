@@ -101,6 +101,7 @@ function loadAddSkillCard(items, element) {
 
 loadAddSkillCard(addSkills, AddSkill_card);
 
+//Menu desplegable
 function toggleMenu() {
   menuMobile.classList.toggle("hidden");
 }

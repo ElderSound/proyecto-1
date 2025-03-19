@@ -1,4 +1,6 @@
 const project_card = document.querySelector("#card_container");
+const menuToggle = document.querySelector("#menu-toggle");
+const menuMobile = document.querySelector("#menu-mobile");
 
 const projects = [
   {
@@ -61,3 +63,10 @@ function loadProjectCard(items, element) {
 }
 
 loadProjectCard(projects, project_card);
+
+//Menu desplegable
+function toggleMenu() {
+  menuMobile.classList.toggle("hidden");
+}
+
+menuToggle.addEventListener("click", toggleMenu);

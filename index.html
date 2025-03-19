@@ -12,8 +12,8 @@
 <body class="bg-[var(--color-dark)] text-[var(--color-light)]">
   <!-- HEADER -->
 
-  <header>
-    <div id="navegador" class="relative bg-[var(--color-dark)] flex justify-between items-center p-3">
+  <header class="sticky top-0 z-20 md:static">
+    <div id="navegador" class="relative bg-[var(--color-dark)] flex justify-between items-center py-0 px-2 md:py-3 ">
       <span><img src="./src/icons/decepticon.png" alt="elder logo" class="h-10"></span>
 
       <!-- NAV -->
@@ -259,7 +259,7 @@
     </section>
   </main>
   <!-- FOOTER -->
-  <footer class="bg-[var(--color-dark)] text-[var(--color-light)] py-6">
+  <footer class="bg-[var(--color-dark)] text-[var(--color-light)] py-6 hidden md:block">
     <div class="container mx-auto px-6 flex justify-between items-center">
       <span><img src="./src/icons/decepticon.png" alt="elder logo" class="w-16 h-auto"></span>
       <nav>
