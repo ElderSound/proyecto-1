@@ -215,11 +215,20 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-3 {
     top: calc(var(--spacing) * 3);
   }
   .top-10 {
     top: calc(var(--spacing) * 10);
+  }
+  .top-13 {
+    top: calc(var(--spacing) * 13);
+  }
+  .top-14 {
+    top: calc(var(--spacing) * 14);
   }
   .top-15 {
     top: calc(var(--spacing) * 15);
@@ -796,6 +805,11 @@
   .md\:top-3 {
     @media (width >= 48rem) {
       top: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:top-15 {
+    @media (width >= 48rem) {
+      top: calc(var(--spacing) * 15);
     }
   }
   .md\:top-17 {
